@@ -25,9 +25,10 @@ node {
 
     // send email
     if(to != null && !to.isEmpty()) {
-      emailext(body: content, mimeType: 'text/html',
-         replyTo: '$DEFAULT_REPLYTO', subject: subject,
-         to: to, attachLog: true )
+       println('1')
+      emailext(body: content, mimeType: 'text/html',         
+         replyTo: '$DEFAULT_REPLYTO', subject: subject, to: to, attachLog: true )
+       println('2')
     }
 
     // mark current build as a failure and throw the error
